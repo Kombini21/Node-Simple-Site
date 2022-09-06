@@ -5,6 +5,10 @@ const express = require('express');
 
 const app = express();
 
+// Define o local dos arquivos html 
+
+app.use(express.static(__dirname + '/pages'));
+
 // Começa a receber requests
 
 app.listen(8080);
@@ -13,21 +17,21 @@ app.listen(8080);
 
 app.get('/', (req, res) => {
 
-    res.render('./pages/index.html');
+    res.sendFile(__dirname + '/pages/index.html');
 });
 
 app.get('/sobre', (req, res) => {
 
-    res.render('./pages/about.html');
+    res.sendFile(__dirname + '/pages/about.html');
 });
 
 app.get('/contato', (req, res) => {
 
-    res.render('/pages/contact-me.html');
+    res.sendFile(__dirname + '/pages/contact-me.html');
 });
 
 // Retorna qualquer outro tipo de request pra uma página 404
 
 app.use((req, res, next) => {
-    res.render('./pages/404.html');
+    res.sendFile(__dirname + '/pages/404.html');
 });

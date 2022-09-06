@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200;500&display=swap');
+
+body {
+    text-align: center;
+    background-color: #90B77D ;
+    font-family: 'Antonio', sans-serif;
+    color: #483838;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding-right: 1rem;
+    color: #D2D79F;
+}
